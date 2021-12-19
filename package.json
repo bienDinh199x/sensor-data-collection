@@ -1,0 +1,27 @@
+{
+  "name": "webservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@datdp88/nodejs-datdp-pretty-console-log": "0.0.3",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "chart.js": "^3.5.1",
+    "chartjs-gauge": "^0.3.0",
+    "chartjs-plugin-datalabels": "^2.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-promise-router": "^4.1.0",
+    "joi": "^17.4.2",
+    "moment": "^2.29.1",
+    "node-wifi": "^2.0.15",
+    "serialport": "^9.2.4",
+    "xlsx": "^0.17.3"
+  },
+  "devDependencies": {}
+}

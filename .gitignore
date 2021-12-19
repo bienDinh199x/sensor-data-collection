@@ -1,0 +1,8 @@
+node_modules/
+.vscode
+.ftpconfig
+views/data.db
+views/data.db-shm
+views/data.db-wal
+.git
+.history

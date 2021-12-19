@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" media="all" type="text/css" href="jquery-ui.css" />
+		<link rel="stylesheet" media="all" type="text/css" href="jquery-ui-timepicker-addon.css" />
+
+	</head>
+	<body>
+
+
+	<div class="example-container">
+		<div>
+	 		<input id="range_example_1_start" value="08/20/2014 09:22" /> 
+	 		<input id="range_example_1_end" value="08/21/2014 08:00" />
+		</div>					
+		<pre>
+		
+		</pre>
+	</div>
+
+
+		<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="jquery-ui.min.js"></script>
+		<script type="text/javascript" src="jquery-ui-timepicker-addon.js"></script>
+
+		<script type="text/javascript">
+			
+			$(function(){
+				var startDateTextBox = $('#range_example_1_start');
+				var endDateTextBox = $('#range_example_1_end');
+
+				startDateTextBox.datetimepicker({ 
+					timeFormat: 'HH:mm',
+					dateFormat: 'mm.yy',
+					onClose: function(dateText, inst) {
+						if (endDateTextBox.val() != '') {
+							var testStartDate = startDateTextBox.datetimepicker('getDate');
+							var testEndDate = endDateTextBox.datetimepicker('getDate');
+							if (testStartDate > testEndDate)
+								endDateTextBox.datetimepicker('setDate', testStartDate);
+						}
+						else {
+							endDateTextBox.val(dateText);
+						}
+					},
+					onSelect: function (selectedDateTime){
+						endDateTextBox.datetimepicker('option', 'minDate', startDateTextBox.datetimepicker('getDate') );
+					}
+				});
+				endDateTextBox.datetimepicker({ 
+					timeFormat: 'HH:mm',
+					onClose: function(dateText, inst) {
+						if (startDateTextBox.val() != '') {
+							var testStartDate = startDateTextBox.datetimepicker('getDate');
+							var testEndDate = endDateTextBox.datetimepicker('getDate');
+							if (testStartDate > testEndDate)
+								startDateTextBox.datetimepicker('setDate', testEndDate);
+						}
+						else {
+							startDateTextBox.val(dateText);
+						}
+					},
+					onSelect: function (selectedDateTime){
+						startDateTextBox.datetimepicker('option', 'maxDate', endDateTextBox.datetimepicker('getDate') );
+					}
+				});
+			});
+			
+		</script>
+	</body> 
+</html>

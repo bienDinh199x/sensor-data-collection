@@ -1,0 +1,375 @@
+#root {
+  width: 1024px;
+  height: 600px;
+}
+/*
+##     ## ########    ###    ########  ######## ########
+##     ## ##         ## ##   ##     ## ##       ##     ##
+##     ## ##        ##   ##  ##     ## ##       ##     ##
+######### ######   ##     ## ##     ## ######   ########
+##     ## ##       ######### ##     ## ##       ##   ##
+##     ## ##       ##     ## ##     ## ##       ##    ##
+##     ## ######## ##     ## ########  ######## ##     ##
+*/
+#logo {
+  width: 200px;
+  height: 39px;
+  float: left;
+}
+#logo span {
+  font-size: 16px;
+  line-height: 39px;
+}
+#logo_e360 {
+  background: transparent url(../images/logo_e360.png) 3px 3px / auto
+    calc(100% - 6px) no-repeat;
+  height: 100%;
+  width: 90px;
+  margin-left: 20px;
+  float: left;
+}
+#logo_thanhnam {
+  background: transparent url(../images/logo_thanhnam.png) 3px 3px / auto
+    calc(100% - 6px) no-repeat;
+  height: 100%;
+  width: 50px;
+  float: left;
+}
+
+#icon_status {
+  float: right;
+  text-align: center;
+  color: #999;
+}
+
+#icon_status b {
+  font-size: 18px;
+  margin-top: 2px;
+}
+#icon_status > div {
+  padding: 0 10px;
+  float: left;
+}
+#icon_status > div > div {
+  font-size: 10px;
+}
+
+/*
+######## ##     ## ####    ##    ##  ######   ##     ## #### ######## ##     ##
+.  ##    ##     ##  ##     ###   ## ##    ##  ##     ##  ##  ##       ###   ###
+.  ##    ##     ##  ##     ####  ## ##        ##     ##  ##  ##       #### ####
+.  ##    #########  ##     ## ## ## ##   #### #########  ##  ######   ## ### ##
+.  ##    ##     ##  ##     ##  #### ##    ##  ##     ##  ##  ##       ##     ##
+.  ##    ##     ##  ##     ##   ### ##    ##  ##     ##  ##  ##       ##     ##
+.  ##    ##     ## ####    ##    ##  ######   ##     ## #### ######## ##     ##
+*/
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.toggle_chart {
+  position: fixed;
+  top: calc(50% - 4px);
+  right: 3px;
+  line-height: 30px;
+}
+/*######*/
+.list_chart {
+  float: left;
+  width: 100%;
+  height: calc(100% - 28px);
+}
+.control_chart {
+  float: left;
+  height: 32px;
+  width: 100%;
+}
+.control_chart > label {
+  padding-right: 10px;
+}
+.control_chart > i {
+  float: right;
+  line-height: 34px;
+  color: #888;
+}
+.info_chart {
+  height: 100%;
+  float: left;
+  width: 215px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 5px;
+}
+/*######*/
+
+.chart > div {
+  height: 100%;
+}
+.chart .w3-badge {
+  position: absolute;
+  margin-top: -4px;
+  margin-left: -4px;
+  line-height: 24px;
+}
+/*######*/
+.chart_view_100 {
+  height: 100%;
+}
+.chart_view_100 .list_chart > div {
+  float: left;
+  width: 100%;
+  height: 50%;
+}
+.chart_view_100 .line_chart > canvas {
+  float: left;
+  width: 100% !important;
+  height: 255px !important;
+}
+/*######*/
+.chart_view_50 {
+  height: 50%;
+}
+.chart_view_50 .list_chart > div {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+.chart_view_50 .line_chart > canvas {
+  float: left;
+  width: 100% !important;
+  height: 230px !important;
+}
+
+.chart_view_0 {
+  display: none;
+}
+
+.list_chart > div {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.metter_chart {
+  padding-bottom: 4px;
+}
+.metter_chart > div {
+  display: block;
+  height: 100%;
+  width: 191px;
+  float: left;
+  margin: 0px 2px;
+  padding-top: 20px;
+}
+.metter_chart canvas {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+/*
+.######     ###    ####    ########     ###    ########
+##    ##   ## ##    ##     ##     ##   ## ##      ##
+##        ##   ##   ##     ##     ##  ##   ##     ##
+##       ##     ##  ##     ##     ## ##     ##    ##
+##       #########  ##     ##     ## #########    ##
+##    ## ##     ##  ##     ##     ## ##     ##    ##
+.######  ##     ## ####    ########  ##     ##    ##
+*/
+.tablink1 {
+  width: 100%;
+  border: 1px solid #fff;
+}
+.tab_set {
+  height: calc(100% - 116px);
+}
+/*
+##     ## ##     ## ##     ##
+ ##   ##   ##   ##   ##   ##
+  ## ##     ## ##     ## ##
+   ###       ###       ###
+  ## ##     ## ##     ## ##
+ ##   ##   ##   ##   ##   ##
+##     ## ##     ## ##     ##
+*/
+.main_tab {
+  width: 100%;
+  height: calc(100% - 39px);
+}
+header {
+  text-align: center;
+  height: 40px;
+  font-size: 26px;
+}
+header i {
+  font-size: 30px;
+}
+#mySidebar {
+  padding: 5px;
+}
+nav {
+  width: 100%;
+  height: calc(100% - 40px);
+}
+
+#list,
+#detail {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+#chart {
+  width: 100%;
+  height: calc(100% - 30px);
+}
+.sensor {
+  width: 100%;
+  height: 100px;
+  float: left;
+  margin: 5px 0;
+  padding: 0 !important;
+}
+.sensor .w3-badge {
+  position: absolute;
+  margin-top: -5px;
+  right: 2px;
+  width: 28px;
+}
+.sensor .icon_val {
+  float: left;
+  padding: 5px;
+  width: 80px;
+  height: 100%;
+  text-align: center;
+}
+.icon {
+  width: 70px;
+  height: 70px;
+}
+.sensor .sensor_info {
+  float: left;
+  width: calc(100% - 80px);
+  height: 100%;
+  text-align: left;
+}
+.sensor .sensor_info .info {
+  float: left;
+  padding: 5px;
+  width: 100%;
+  height: calc(100% - 30px);
+  text-align: left;
+}
+.sensor .sensor_status {
+  float: left;
+  width: calc(100% - 29px);
+  padding: 1px;
+  font-size: 12px;
+  height: 30px;
+  line-height: 14px;
+  text-align: center;
+}
+.btn_menu {
+  float: right;
+  width: 29px;
+  padding: 1px;
+  text-align: center;
+  margin-top: -36px;
+}
+
+#mode_chart_1,
+#mode_chart_2 {
+  width: 100%;
+  height: 100%;
+}
+#mode_chart_1 > div > div,
+#mode_chart_2 > div > div {
+  width: 100%;
+  height: 100%;
+}
+#mode_chart_1 > div {
+  height: 100%;
+}
+#mode_chart_2 > div {
+  height: 50%;
+}
+.chart {
+  padding: 5px;
+  width: 100%;
+}
+
+.chart .view_chart {
+  height: 100%;
+  float: left;
+  padding: 5px;
+  width: calc(100% - 215px);
+}
+
+.chart .time {
+  width: calc(100% - 70px);
+  height: 26px;
+  float: left;
+  text-align: center;
+  line-height: 25px;
+  font-style: italic;
+  font-size: 12px;
+}
+.chart .name {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 35px;
+}
+.chart .icon {
+  width: 70px;
+  height: 70px;
+  float: left;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.chart .val {
+  float: left;
+  width: calc(100% - 70px);
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+}
+.chart .val span {
+  font-size: 50px;
+}
+.chart .val sup {
+  font-size: 20px;
+}
+.butonChart {
+  float: left;
+  width: 50%;
+  height: 39px;
+  padding: 3px;
+}
+.butonChart button {
+  width: 100%;
+  padding: 5px 4px;
+}
+
+#student_name_keyboard {
+  position: fixed;
+  top: calc(100% - 223px);
+  left: calc(50% - 451px);
+}
+
+/*
+.######     ###    ####    ########     ###    ########
+##    ##   ## ##    ##     ##     ##   ## ##      ##
+##        ##   ##   ##     ##     ##  ##   ##     ##
+##       ##     ##  ##     ##     ## ##     ##    ##
+##       #########  ##     ##     ## #########    ##
+##    ## ##     ##  ##     ##     ## ##     ##    ##
+.######  ##     ## ####    ########  ##     ##    ##
+*/
+.card_setting {
+  width: calc(50% - 20px);
+  height: calc(100% - 20px);
+  float: left;
+  margin: 10px;
+  padding: 10px;
+}
