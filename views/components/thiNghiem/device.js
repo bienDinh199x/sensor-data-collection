@@ -25,7 +25,7 @@ function showListDevice() { // list sensor
 
 function statusDevice() {
   time_string((_str, now, zone) => {
-    console.log(listSensor);
+    // console.log(listSensor);
     for (let i in listSensor) {
       switch (listSensor[i].key) {
         case flagChart[0].key:
@@ -39,11 +39,11 @@ function statusDevice() {
           break;
       }
       if ((now - zone * 60 * 60 * 1000 - listSensor[i].unit_time * 1000) > 5000) {
-        $(`#${listSensor[i].key}`).addClass(`w3-light-gray`)
-        $(`#${listSensor[i].key}`).removeClass(`w3-green`)
+        $(`#${listSensor[i].key}`).addClass(`w3-light-gray`).hide();
+        $(`#${listSensor[i].key}`).removeClass(`w3-green`);
       } else {
-        $(`#${listSensor[i].key}`).addClass(`w3-green`)
-        $(`#${listSensor[i].key}`).removeClass(`w3-light-gray`)
+        $(`#${listSensor[i].key}`).addClass(`w3-green`).show();
+        $(`#${listSensor[i].key}`).removeClass(`w3-light-gray`);
       }
     }
   })

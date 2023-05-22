@@ -37,18 +37,18 @@ function detail(key) {
         line[x].update();
 
         data = [min + range * .1, min + range * .2, min + range * .3, min + range * .4, min + range * .5, min + range * .6, min + range * .7, min + range * .8, min + range * .9, max]
-        gauge[x][0].config.data.datasets[0].data = data; gauge[x][0].update();
-        gauge[x][1].config.data.datasets[0].data = data; gauge[x][1].update();
-        gauge[x][2].config.data.datasets[0].data = data; gauge[x][2].update();
+        // gauge[x][0].config.data.datasets[0].data = data; gauge[x][0].update();
+        // gauge[x][1].config.data.datasets[0].data = data; gauge[x][1].update();
+        // gauge[x][2].config.data.datasets[0].data = data; gauge[x][2].update();
       } else { // Không có max, min --> Set mặc định
-        gauge[x][0].config.data.datasets[0].data = gaugeData; gauge[x][0].update();
-        gauge[x][1].config.data.datasets[0].data = gaugeData; gauge[x][1].update();
-        gauge[x][2].config.data.datasets[0].data = gaugeData; gauge[x][2].update();
+        // gauge[x][0].config.data.datasets[0].data = gaugeData; gauge[x][0].update();
+        // gauge[x][1].config.data.datasets[0].data = gaugeData; gauge[x][1].update();
+        // gauge[x][2].config.data.datasets[0].data = gaugeData; gauge[x][2].update();
       }
 
-      gauge[x][0].config.data.datasets[0].value = 0; gauge[x][0].update();
-      gauge[x][1].config.data.datasets[0].value = 0; gauge[x][1].update();
-      gauge[x][2].config.data.datasets[0].value = 0; gauge[x][2].update();
+      // gauge[x][0].config.data.datasets[0].value = 0; gauge[x][0].update();
+      // gauge[x][1].config.data.datasets[0].value = 0; gauge[x][1].update();
+      // gauge[x][2].config.data.datasets[0].value = 0; gauge[x][2].update();
       line[x].data.datasets[0].data = []; line[x].update();
       line[x].data.datasets[1].data = []; line[x].update();
       line[x].data.datasets[2].data = []; line[x].update();
@@ -75,8 +75,8 @@ function updateDetail(json) {
 function addDataChart(x, json) {
   console.log(x);
   // console.log(x);
-  gauge[x][flagChart[x].numChart].config.data.datasets[0].value = json.val
-  gauge[x][flagChart[x].numChart].update();
+  // gauge[x][flagChart[x].numChart].config.data.datasets[0].value = json.val
+  // gauge[x][flagChart[x].numChart].update();
 
   flagChart[x].count++;
   if (flagChart[x].count > config.chart.maxLength) {

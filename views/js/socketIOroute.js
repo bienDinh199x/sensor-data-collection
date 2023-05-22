@@ -20,7 +20,7 @@ function socketIOroute(key, data) {
       showListDevice()
       break;
     case `dataSensor`:
-      // console.log(data);
+      // console.log("dataSensor=" + data.val);
       listSensor[data.key] = data
       updateListSensor(data)
       updateDetail(data)

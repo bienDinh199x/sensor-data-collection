@@ -28,6 +28,7 @@ function data2Db(data) {
   if (data.slice(0, 1) == '@') { // chỉ nhận bắt đầu @
     // console.log(data);
     data = data.replace(/@/g, ""); // bỏ @
+    data = data.replace(/%/g, ""); // bỏ @
     if (data == data.replace(/[^a-zA-Z0-9,._-]/g, "")) { // Không có ký tự lạ
       arr = data.split(',')
       console.time(arr[1]);
@@ -37,8 +38,8 @@ function data2Db(data) {
           no: arr[1],
           val: +arr[2],
           unit: arr[3],
-          min: arr[4] ? +arr[4] : null,
-          max: arr[5] ? +arr[5] : null,
+          min: arr[2] ? arr[2] : null,
+          max: arr[2] ? +arr[2] : null,
           key: `${arr[0]}_${arr[1]}`,
           unit_time: utc0Time
         }

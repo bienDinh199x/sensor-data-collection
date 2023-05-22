@@ -1,1 +1,122 @@
-{"ph_sht10":{"type":"ph","no":"sht10","val":3.36,"unit":"ph","min":0,"max":14,"key":"ph_sht10","unit_time":1637134850},"ph_sht444":{"type":"ph","no":"sht444","val":1.22,"unit":"ph","min":0,"max":14,"key":"ph_sht444","unit_time":1637134850},"ph_sht101":{"type":"ph","no":"sht101","val":7.84,"unit":"ph","min":0,"max":14,"key":"ph_sht101","unit_time":1636234328},"Hum_AM2315":{"type":"Hum","no":"AM2315","val":74.1,"unit":"%","min":0,"max":100,"key":"Hum_AM2315","unit_time":1637135602}}
+{
+  "SALValue_SHT30": {
+    "type": "SALValue",
+    "no": "SHT30",
+    "val": 0,
+    "unit": "ppt",
+    "min": null,
+    "max": null,
+    "key": "SALValue_SHT30",
+    "unit_time": 1640001139
+  },
+  "ap_suat_sht10": {
+    "type": "ap_suat",
+    "no": "sht10",
+    "val": -3,
+    "unit": "kPa",
+    "min": null,
+    "max": null,
+    "key": "ap_suat_sht10",
+    "unit_time": 1639645058
+  },
+  "Temper_PT100": {
+    "type": "Temper",
+    "no": "PT100",
+    "val": 21.76,
+    "unit": "C",
+    "min": null,
+    "max": null,
+    "key": "Temper_PT100",
+    "unit_time": 1639995118
+  },
+  "Hum_AM2315": {
+    "type": "Hum",
+    "no": "AM2315",
+    "val": 63.2,
+    "unit": "%",
+    "min": null,
+    "max": null,
+    "key": "Hum_AM2315",
+    "unit_time": 1639995106
+  },
+  "OXY_40XV": {
+    "type": "OXY",
+    "no": "40XV",
+    "val": 21.2,
+    "unit": "%",
+    "min": null,
+    "max": null,
+    "key": "OXY_40XV",
+    "unit_time": 1639995071
+  },
+  "LoadCell_5Kg": {
+    "type": "LoadCell",
+    "no": "5Kg",
+    "val": 0.01,
+    "unit": "N",
+    "min": null,
+    "max": null,
+    "key": "LoadCell_5Kg",
+    "unit_time": 1639996981
+  },
+  "Amthanh_DFR0034": {
+    "type": "Amthanh",
+    "no": "DFR0034",
+    "val": 16,
+    "unit": "dBA",
+    "min": null,
+    "max": null,
+    "key": "Amthanh_DFR0034",
+    "unit_time": 1661542041
+  },
+  "pH_pHE201": {
+    "type": "pH",
+    "no": "pHE201",
+    "val": 14.48,
+    "unit": "pH",
+    "min": null,
+    "max": null,
+    "key": "pH_pHE201",
+    "unit_time": 1661544053
+  },
+  "OXY_DO_E360_DO": {
+    "type": "OXY_DO",
+    "no": "E360_DO",
+    "val": 5,
+    "unit": "mgL",
+    "min": null,
+    "max": null,
+    "key": "OXY_DO_E360_DO",
+    "unit_time": 1640001057
+  },
+  "CO2_MHZ16": {
+    "type": "CO2",
+    "no": "MHZ16",
+    "val": 849,
+    "unit": "ppm",
+    "min": null,
+    "max": null,
+    "key": "CO2_MHZ16",
+    "unit_time": 1640004148
+  },
+  "Hum_SHT30": {
+    "type": "Hum",
+    "no": "SHT30",
+    "val": 73.54,
+    "unit": "",
+    "min": null,
+    "max": null,
+    "key": "Hum_SHT30",
+    "unit_time": 1661542346
+  },
+  "Light_VEML300": {
+    "type": "Light",
+    "no": "VEML300",
+    "val": 73.54,
+    "unit": "",
+    "min": null,
+    "max": null,
+    "key": "Light_VEML300",
+    "unit_time": 1661542346
+  }
+}

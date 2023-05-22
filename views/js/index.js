@@ -192,12 +192,13 @@ function clearChart(x) {
   console.log(flagChart[x].count);
   console.log(flagChart[x].numChart);
   for (let i = 0; i <= flagChart[x].count; i++) {
-    chart[x].data.datasets[flagChart[x].numChart].data[i] = null;
+    // chart[x].data.datasets[flagChart[x].numChart].data[i] = null;
+    line[x].data.datasets[x].data = []; line[x].update();
   }
 
-  flagChart[x].count = -1;
+  flagChart[x].count = x;
   flagChart[x].data[flagChart[x].numChart] = []
-  chart[x].update();
+  // chart[x].update();
   $(`#info_chart_${x} .w3-white`).hide()
   $(`#info_chart_${x} .w3-yellow`).hide()
 }

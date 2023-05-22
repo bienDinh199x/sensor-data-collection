@@ -12,9 +12,9 @@ module.exports = {
   "data": "./views/data.db",
   "_comment_data": "Link bảng CSDL Sqlite",
   rs485: {
-    comPort: "/dev/ttyS0",
+    // comPort: "/dev/ttyS0",
     // comPort: "/dev/ttyUSB0",
-    // comPort: "COM5",
+    comPort: "COM3",
     baudRate: 115200,
     "endBuffer": "\n"
   },

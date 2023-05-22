@@ -14,7 +14,7 @@ var gaugeOptions = {
  },
  needle: {
   // Needle circle radius as the percentage of the chart area width
-  radiusPercentage: 1,
+  radiusPercentage: 2,
   // Needle width as the percentage of the chart area width
   widthPercentage: 3.2,
   // Needle length as the percentage of the interval between inner radius (0%) and outer radius (100%) of the arc
