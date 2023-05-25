@@ -23,7 +23,6 @@ const fs = require('fs');
 
 
 async function saveChartExcelData(data) {
-  console.log('em o day!!!!!!!!!')
   let dir = __dirname.replace('\\modules', '')
   dir = dir.replace('/modules', '')
 
@@ -39,34 +38,45 @@ async function saveChartExcelData(data) {
   // await copyFileExcel(`${data.userName}-${data.chartName}`)
   const file = XLSX.readFile(`${dir}/data/file_mau.xlsx`)
 
-  // // Sample data set
-  let dataXlsx = []
+   // Kiểm tra xem sheet "Sheet1" có tồn tại không
+   if (file.SheetNames.includes("Sheet1")) {
+    // Xóa sheet "Sheet1"
+    delete file.Sheets["Sheet1"];
+    // Xóa sheet "Sheet1" khỏi mảng SheetNames
+    const sheetIndex = file.SheetNames.indexOf("Sheet1");
+    file.SheetNames.splice(sheetIndex, 1);
+  }
 
-  data.data[0].map((key, i) => {
-    if (typeof dataXlsx[i] == 'undefined') {
-      dataXlsx[i] = { L1: "", L2: "", L3: "" }
-    }
-    dataXlsx[i][`L1`] = key
-  })
-
-  data.data[1].map((key, i) => {
-    if (typeof dataXlsx[i] == 'undefined') {
-      dataXlsx[i] = { L1: "", L2: "", L3: "" }
-    }
-    dataXlsx[i][`L2`] = key
-  })
-
-  data.data[2].map((key, i) => {
-    if (typeof dataXlsx[i] == 'undefined') {
-      dataXlsx[i] = { L1: "", L2: "", L3: "" }
-    }
-    dataXlsx[i][`L3`] = key
-  })
+  // Khởi tạo mảng dataXlsx với các đối tượng rỗng
+  let dataXlsx = Array.from({ length: Math.max(data.data[0].length, data.data[1].length, data.data[2].length) }, () => ({ L1: "", L2: "", L3: "" }));
 
   console.log(data.data);
-  const ws = XLSX.utils.json_to_sheet(dataXlsx)
+  console.log(data.data[0].length);
+  console.log(data.data[1].length);
+  console.log(data.data[2].length);
+  for (let i = 0; i < data.data[0].length; i++) {
+    if (dataXlsx[i]) {
+      dataXlsx[i].L1 = data.data[0][i] || "";
+    }
+  }
 
-  XLSX.utils.book_append_sheet(file, ws, "du_lieu")
+  for (let i = 0; i < data.data[1].length; i++) {
+    if (dataXlsx[i]) {
+      dataXlsx[i].L2 = data.data[1][i] || "";
+    }
+  }
+
+  for (let i = 0; i < data.data[2].length; i++) {
+    if (dataXlsx[i]) {
+      dataXlsx[i].L3 = data.data[2][i] || "";
+    }
+  }
+
+
+  const ws = XLSX.utils.json_to_sheet(dataXlsx);
+  console.log(ws);
+
+  XLSX.utils.book_append_sheet(file, ws, "du_lieu");
 
   // Writing to our file
   XLSX.writeFile(file, `${dir}/data/xlsx/${data.userName}-${data.chartName}.xlsx`)

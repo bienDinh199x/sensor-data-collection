@@ -67,7 +67,6 @@ function getListSensor(socket) {
 
 
 function saveDataChart(socket, data) {
-  console.log('em o day anh oi !!!!!!!!!!');
   saveChartExcelData(data)
 }
 
