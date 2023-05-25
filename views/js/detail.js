@@ -74,18 +74,25 @@ function updateDetail(json) {
 
 
 function addDataChart(x, json) {
-  console.log(x);
-  // console.log(x);
-  gauge[x][flagChart[x].numChart].config.data.datasets[0].value = json.val
-  gauge[x][flagChart[x].numChart].update();
+  console.log('addDataChart='+x);
+  console.log('addDataChart='+JSON.stringify(json));
+  if (gauge[x] && gauge[x][flagChart[x].numChart] && gauge[x][flagChart[x].numChart].config) {
+    gauge[x][flagChart[x].numChart].config.data.datasets[0].value = json.val;
+    gauge[x][flagChart[x].numChart].update();
+  }
 
   flagChart[x].count++;
   if (flagChart[x].count > config.chart.maxLength) {
-    flagChart[x].count = config.chart.maxLength
-    line[x].data.datasets[flagChart[x].numChart].data.splice(0, 1)
+    flagChart[x].count = config.chart.maxLength;
+    line[x].data.datasets[flagChart[x].numChart].data.splice(0, 1);
   }
-  // chart[x].data.datasets[flagChart[x].numChart].data.push(json.val);
-  line[x].data.datasets[flagChart[x].numChart].data[flagChart[x].count] = json.val;
-  flagChart[x].data[flagChart[x].numChart].push(json.val)
-  line[x].update();
+
+  if (line[x] && line[x].data && line[x].data.datasets && line[x].data.datasets[flagChart[x].numChart]) {
+    line[x].data.datasets[flagChart[x].numChart].data[flagChart[x].count] = json.val;
+    line[x].update();
+  }
+
+  if (flagChart[x] && flagChart[x].data && flagChart[x].data[flagChart[x].numChart]) {
+    flagChart[x].data[flagChart[x].numChart].push(json.val);
+  }
 }

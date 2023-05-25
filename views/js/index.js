@@ -189,18 +189,29 @@ function addChart(x) {
 
 function clearChart(x) {
   console.log(x);
-  console.log(flagChart[x].count);
-  console.log(flagChart[x].numChart);
-  for (let i = 0; i <= flagChart[x].count; i++) {
-    // chart[x].data.datasets[flagChart[x].numChart].data[i] = null;
-    line[x].data.datasets[x].data = []; line[x].update();
+  if (line[x] && line[x].data && line[x].data.datasets) {
+    for (let i = 0; i <= flagChart[x].count; i++) {
+      if (line[x].data.datasets[i]) {
+        line[x].data.datasets[i].data = [];
+        line[x].update();
+      }
+      if (gauge[x][i]) {
+        gauge[x][i].config.data.datasets[0].value = 0;
+        gauge[x][i].update();
+      }
+    }
   }
 
-  flagChart[x].count = x;
-  flagChart[x].data[flagChart[x].numChart] = []
-  // chart[x].update();
-  $(`#info_chart_${x} .w3-white`).hide()
-  $(`#info_chart_${x} .w3-yellow`).hide()
+  if (flagChart[x]) {
+    flagChart[x].count = -1;
+    flagChart[x].numChart = -1;
+  }
+
+  $(`#info_chart_${x} .w3-white`).hide();
+  $(`#info_chart_${x} .w3-yellow`).hide();
+
+  $(`#view_chart_${x} .lan_do b`).html(flagChart[x].numChart + 1);
+  addChart(x);
 }
 
 function fromSaveChart(x) {
