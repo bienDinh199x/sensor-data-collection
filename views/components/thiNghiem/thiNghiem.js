@@ -91,7 +91,7 @@ function toggleMultiChart() {
 }
 
 function changeChart() {
-  console.log("hre1!");
+  console.log("changeChart!");
   var typeChart0 = $('#view_chart_0 input[type=radio]:checked').val();
   var typeChart1 = $('#view_chart_1 input[type=radio]:checked').val();
   if (!flagToggleMultiChart) {
