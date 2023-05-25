@@ -92,6 +92,6 @@ function readChart(fileName) {
   return json
 }
 module.exports = {
-  saveChart,
+  saveChartExcelData,
   readChart,
 }

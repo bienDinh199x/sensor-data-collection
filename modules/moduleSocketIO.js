@@ -14,7 +14,7 @@ const cli = require(`./moduleCLI`)
 const { readJson, writeJson } = require(`../helpers/helperJson`)
 const { connectWifi, getWifiInfo, getListWifi } = require(`./moduleWifi`)
 const { getUserInfo, saveUserInfo } = require(`./moduleUser`)
-const { saveChart, readChart } = require(`./moduleExcel`)
+const { saveChartExcelData, readChart } = require(`./moduleExcel`)
 
 /*
 ########   #######  ##     ## ######## ########  ######
