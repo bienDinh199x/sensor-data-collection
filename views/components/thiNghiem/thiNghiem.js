@@ -24,16 +24,16 @@ function renderHtmlInfoChart(x) {
           <div class="list_chart">
             <div class="metter_chart">
               <div class="w3-card w3-round-large">
-                <canvas id="gauge${x}_0"></canvas>
                 <b>Đo lần 1</b>
+                <canvas id="gauge${x}_0"></canvas>
               </div>
               <div class="w3-card w3-round-large">
-                <canvas id="gauge${x}_1"></canvas>
                 <b>Đo lần 2</b>
+                <canvas id="gauge${x}_1"></canvas>
               </div>
               <div class="w3-card w3-round-large">
-                <canvas id="gauge${x}_2"></canvas>
                 <b>Đo lần 3</b>
+                <canvas id="gauge${x}_2"></canvas>
               </div>
             </div>
             <div class="w3-card w3-round-large line_chart">
@@ -91,6 +91,7 @@ function toggleMultiChart() {
 }
 
 function changeChart() {
+  console.log("hre1!");
   var typeChart0 = $('#view_chart_0 input[type=radio]:checked').val();
   var typeChart1 = $('#view_chart_1 input[type=radio]:checked').val();
   if (!flagToggleMultiChart) {

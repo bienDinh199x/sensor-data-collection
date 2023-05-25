@@ -32,14 +32,14 @@ function renderRoot() {
   $(`#root`).html(h)
   setTimeout(() => {
     line[0] = new Chart(document.getElementById(`line_0`), JSON.parse(JSON.stringify(configChartLine)));
-    // gauge[0][0] = new Chart(document.getElementById('gauge0_0').getContext('2d'), configChartGauge0);
-    // gauge[0][1] = new Chart(document.getElementById('gauge0_1').getContext('2d'), configChartGauge1);
-    // gauge[0][2] = new Chart(document.getElementById('gauge0_2').getContext('2d'), configChartGauge2);
+    gauge[0][0] = new Chart(document.getElementById('gauge0_0').getContext('2d'), configChartGauge0);
+    gauge[0][1] = new Chart(document.getElementById('gauge0_1').getContext('2d'), configChartGauge1);
+    gauge[0][2] = new Chart(document.getElementById('gauge0_2').getContext('2d'), configChartGauge2);
 
     line[1] = new Chart(document.getElementById(`line_1`), JSON.parse(JSON.stringify(configChartLine)));
-    // gauge[1][0] = new Chart(document.getElementById('gauge1_0').getContext('2d'), configChartGauge0);
-    // gauge[1][1] = new Chart(document.getElementById('gauge1_1').getContext('2d'), configChartGauge1);
-    // gauge[1][2] = new Chart(document.getElementById('gauge1_2').getContext('2d'), configChartGauge2);
+    gauge[1][0] = new Chart(document.getElementById('gauge1_0').getContext('2d'), configChartGauge0);
+    gauge[1][1] = new Chart(document.getElementById('gauge1_1').getContext('2d'), configChartGauge1);
+    gauge[1][2] = new Chart(document.getElementById('gauge1_2').getContext('2d'), configChartGauge2);
   }, 2000)
 
 }
