@@ -85,22 +85,25 @@ async function saveChartExcelData(data) {
 
 
 
-function readChart(fileName) {
-  let dir = __dirname.replace('\\modules', '')
-  dir = dir.replace('/modules', '')
-
-
+function readChart(fileName, callback) {
+  let dir = __dirname.replace('\\modules', '');
+  dir = dir.replace('/modules', '');
   var workbook = XLSX.readFile(`${dir}/data/xlsx/${fileName}`);
-  data = XLSX.utils.sheet_to_json(workbook.Sheets['du_lieu']);
-  let json = { L1: [], L2: [], L3: [] }
+  var data = XLSX.utils.sheet_to_json(workbook.Sheets['du_lieu']);
+  var json = { L1: [], L2: [], L3: [] };
   data.map(key => {
     if (key.L1 != "") { json.L1.push(key.L1) }
     if (key.L2 != "") { json.L2.push(key.L2) }
     if (key.L3 != "") { json.L3.push(key.L3) }
-
-  })
-  return json
+  });
+  console.log('readChart=' + JSON.stringify(json));
+  if (callback && typeof callback === 'function') {
+    callback(json);
+  }
 }
+
+
+
 module.exports = {
   saveChartExcelData,
   readChart,

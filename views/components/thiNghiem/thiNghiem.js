@@ -45,7 +45,6 @@ function renderHtmlInfoChart(x) {
           </div>
           <div class="control_chart">
             <input class="w3-radio" type="radio" name="type_chart${x}" value="line" checked onclick="changeChart()"><label> Biểu đồ</label>
-            <input class="w3-radio" type="radio" name="type_chart${x}" value="table" onclick="changeChart()"><label> Bảng</label>
             <input class="w3-radio" type="radio" name="type_chart${x}" value="metter" onclick="changeChart()"><label> Đồng hồ</label>
             <i class="lan_do">Lần đo thứ <b>...</b></i>
           </div>

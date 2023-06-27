@@ -14,7 +14,8 @@ const cli = require(`./moduleCLI`)
 const { readJson, writeJson } = require(`../helpers/helperJson`)
 const { connectWifi, getWifiInfo, getListWifi } = require(`./moduleWifi`)
 const { getUserInfo, saveUserInfo } = require(`./moduleUser`)
-const { saveChartExcelData, readChart } = require(`./moduleExcel`)
+const { saveChartExcelData, readChart } = require(`./moduleExcel`);
+const { json } = require("express");
 
 /*
 ########   #######  ##     ## ######## ########  ######
@@ -40,7 +41,11 @@ function route(socket, key, data) {
     case 'getListSensor': getListSensor(socket); break;
     case 'getListFile': listFile(); break;
     case 'saveDataChart': saveDataChart(socket, data); break;
-    case 'reviewFile': reviewFile(socket, data); break;
+    case 'reviewFile':
+      reviewFile(data.fileName, function (json) {
+        socket.emit(`reviewFileResponse`, json);
+      });
+      break;
 
 
     default: console.warn(`socketIO topic ${key}`); break;
@@ -71,10 +76,16 @@ function saveDataChart(socket, data) {
 }
 
 
-function reviewFile(socket, obj) {
-  json = readChart(obj.fileName)
-  console.log(json);
+function reviewFile(fileName, callback) {
+  console.log(fileName);
+  readChart(fileName, function(json) {
+    console.log('reviewFile = ' + JSON.stringify(json));
+    if (callback) {
+      callback(json);
+    }
+  });
 }
+
 
 
 

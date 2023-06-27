@@ -2,7 +2,7 @@ function renderRoot() {
   let h = `
   <div class="w3-bar w3-black">
     <div id="logo">
-      <div id="logo_thanhnam"></div><span>DIEN TU 360 TECH</span>
+      <span style="margin-left: 16px;">BỘ THU THẬP DỮ LIỆU</span>
     </div>
 
     <button id="tab_thi_nghiem" class="w3-bar-item w3-button tablink" onclick="openMainTab('thi_nghiem')"><i class="fas fa-flask"></i> Thí nghiệm</button>

@@ -1,16 +1,18 @@
 {
-  "SALValue_SHT30": {
-    "type": "SALValue",
-    "no": "SHT30",
+  "EC_EC360": {
+    "type": "EC360",
+    "name": "EC",
+    "no": "EC360",
     "val": 0,
-    "unit": "ppt",
+    "unit": "mScm",
     "min": null,
     "max": null,
-    "key": "SALValue_SHT30",
+    "key": "EC_EC360",
     "unit_time": 1640001139
   },
   "ap_suat_sht10": {
     "type": "ap_suat",
+    "name": "Áp suất",
     "no": "sht10",
     "val": -3,
     "unit": "kPa",
@@ -21,6 +23,7 @@
   },
   "Temper_PT100": {
     "type": "Temper",
+    "name": "Nhiệt độ",
     "no": "PT100",
     "val": 21.76,
     "unit": "C",
@@ -29,18 +32,9 @@
     "key": "Temper_PT100",
     "unit_time": 1639995118
   },
-  "Hum_AM2315": {
-    "type": "Hum",
-    "no": "AM2315",
-    "val": 63.2,
-    "unit": "%",
-    "min": null,
-    "max": null,
-    "key": "Hum_AM2315",
-    "unit_time": 1639995106
-  },
   "OXY_40XV": {
     "type": "OXY",
+    "name": "Khí O2",
     "no": "40XV",
     "val": 21.2,
     "unit": "%",
@@ -51,6 +45,7 @@
   },
   "LoadCell_5Kg": {
     "type": "LoadCell",
+    "name": "Lực",
     "no": "5Kg",
     "val": 0.01,
     "unit": "N",
@@ -61,6 +56,7 @@
   },
   "Amthanh_DFR0034": {
     "type": "Amthanh",
+    "name": "Âm thanh",
     "no": "DFR0034",
     "val": 16,
     "unit": "dBA",
@@ -71,6 +67,7 @@
   },
   "pH_pHE201": {
     "type": "pH",
+    "name": "pH",
     "no": "pHE201",
     "val": 14.48,
     "unit": "pH",
@@ -81,6 +78,7 @@
   },
   "OXY_DO_E360_DO": {
     "type": "OXY_DO",
+    "name": "O2 Hòa tan",
     "no": "E360_DO",
     "val": 5,
     "unit": "mgL",
@@ -91,6 +89,7 @@
   },
   "CO2_MHZ16": {
     "type": "CO2",
+    "name": "Khí Co2",
     "no": "MHZ16",
     "val": 849,
     "unit": "ppm",
@@ -101,6 +100,7 @@
   },
   "Hum_SHT30": {
     "type": "Hum",
+    "name": "Độ ẩm",
     "no": "SHT30",
     "val": 73.54,
     "unit": "",
@@ -111,12 +111,35 @@
   },
   "Light_VEML300": {
     "type": "Light",
+    "name": "Ánh sáng",
     "no": "VEML300",
     "val": 73.54,
     "unit": "",
     "min": null,
     "max": null,
     "key": "Light_VEML300",
+    "unit_time": 1661542346
+  },
+  "DongDien_CE360": {
+    "type": "dong_dien",
+    "name": "Dòng điện",
+    "no": "CE360",
+    "val": 73.54,
+    "unit": "",
+    "min": null,
+    "max": null,
+    "key": "DongDien_CE360",
+    "unit_time": 1661542346
+  },
+  "DienThe_VE360": {
+    "type": "DienThe",
+    "name": "Điện thế",
+    "no": "VE360",
+    "val": 73.54,
+    "unit": "",
+    "min": null,
+    "max": null,
+    "key": "DienThe_VE360",
     "unit_time": 1661542346
   }
 }

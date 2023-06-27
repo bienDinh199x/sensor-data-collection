@@ -10,7 +10,7 @@ function showListDevice() { // list sensor
         </div>
         <div class="sensor_info">
           <div class="info">
-          <b>${listSensor[i].type}</b><br>
+          <b>${listSensor[i].name}</b><br>
           ${listSensor[i].no}
           </div>
           <div class="sensor_status"></div>
@@ -39,10 +39,10 @@ function statusDevice() {
           break;
       }
       if ((now - zone * 60 * 60 * 1000 - listSensor[i].unit_time * 1000) > 5000) {
-        $(`#${listSensor[i].key}`).addClass(`w3-light-gray`).hide();
+        $(`#${listSensor[i].key}`).addClass(`w3-light-gray`);
         $(`#${listSensor[i].key}`).removeClass(`w3-green`);
       } else {
-        $(`#${listSensor[i].key}`).addClass(`w3-green`).show();
+        $(`#${listSensor[i].key}`).addClass(`w3-green`);
         $(`#${listSensor[i].key}`).removeClass(`w3-light-gray`);
       }
     }

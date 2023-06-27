@@ -2,9 +2,11 @@
   "name": "webservice",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
+  "bin": {},
   "scripts": {
-    "start": "pm2 start ecosystem.config.js --no-daemon"
+    "start": "pm2 start ecosystem.config.js --no-daemon",
+    "build": "pkg . --output sensor-aplication"
   },
   "author": "",
   "license": "ISC",

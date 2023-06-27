@@ -1,0 +1,19 @@
+1, cd .config
+
+2, sudo mkdir -p lxsession/LXDE-pi
+
+3, sudo nano lxsession/LXDE-pi/autostart
+
+4,  paste vafo file : 
+@lxpanel --profile LXDE-pi
+
+@pcmanfm --desktop --profile LXDE-pi
+
+point-rpi
+
+
+@<application_name>
+
+Trong lệnh trên, chúng tôi đang chạy nhiều ứng dụng, chẳng hạn như “Trình duyệt Chromium” và “Terminal”, vì vậy trong lệnh trên, chúng tôi có tên các ứng dụng này bằng ký hiệu @.
+
+Lưu tệp trên bằng cách sử dụng “CTRL + X” sau khi thêm tên của ứng dụng rồi khởi động lại thiết bị để thực hiện các thay đổi.
